@@ -124,9 +124,9 @@ void from_json(const nlohmann::json &j, NvidiaDevice &device)
     {
         device.intensity = j.at("intensity").get<float>();
 
-        if (device.intensity < 0.0 || device.intensity > 100.0)
+        if (device.intensity < 0.0 || device.intensity > 80.0)
         {
-            throw std::invalid_argument("Intensity value of " + std::to_string(device.intensity) + " is invalid. Must be between 0.0 and 100.0");
+            throw std::invalid_argument("Intensity value of " + std::to_string(device.intensity) + " is invalid. Must be between 0.0 and 80.0");
         }
     }
 
@@ -134,9 +134,9 @@ void from_json(const nlohmann::json &j, NvidiaDevice &device)
     {
         device.desktopLag = j.at("desktopLag").get<float>();
 
-        if (device.desktopLag < 0.0 || device.desktopLag > 100.0)
+        if (device.desktopLag < 0.0 || device.desktopLag > 80.0)
         {
-            throw std::invalid_argument("Desktop lag value of " + std::to_string(device.desktopLag) + " is invalid. Must be between 0.0 and 100.0");
+            throw std::invalid_argument("Desktop lag value of " + std::to_string(device.desktopLag) + " is invalid. Must be between 0.0 and 80.0");
         }
     }
 }
@@ -170,9 +170,9 @@ void from_json(const nlohmann::json &j, AmdDevice &device)
     {
         device.intensity = j.at("intensity").get<float>();
 
-        if (device.intensity < 0.0 || device.intensity > 100.0)
+        if (device.intensity < 0.0 || device.intensity > 80.0)
         {
-            throw std::invalid_argument("Intensity value of " + std::to_string(device.intensity) + " is invalid. Must be between 0.0 and 100.0");
+            throw std::invalid_argument("Intensity value of " + std::to_string(device.intensity) + " is invalid. Must be between 0.0 and 80.0");
         }
     }
 
@@ -180,9 +180,9 @@ void from_json(const nlohmann::json &j, AmdDevice &device)
     {
         device.desktopLag = j.at("desktopLag").get<float>();
 
-        if (device.desktopLag < 0.0 || device.desktopLag > 100.0)
+        if (device.desktopLag < 0.0 || device.desktopLag > 80.0)
         {
-            throw std::invalid_argument("Desktop lag value of " + std::to_string(device.desktopLag) + " is invalid. Must be between 0.0 and 100.0");
+            throw std::invalid_argument("Desktop lag value of " + std::to_string(device.desktopLag) + " is invalid. Must be between 0.0 and 80.0");
         }
     }
 }
